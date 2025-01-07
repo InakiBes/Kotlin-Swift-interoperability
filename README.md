@@ -1,14 +1,23 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# Compose Swift Bridge Demo
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+This repository is a practical demonstration of how to integrate Compose Multiplatform components with native views on iOS using the Compose Swift Bridge. It follows the principles outlined in Touchlab's tutorial to implement a solution that combines the best of Kotlin and SwiftUI, enabling the creation of cross-platform apps with an optimized native experience on each platform.
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+**Touchlab Tutorial:** [https://touchlab.co/composeswiftbridge/tutorial](https://touchlab.co/composeswiftbridge/tutorial)
 
+---
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+### Features
+
+- **Multiplatform setup**: Use KSP and SKIE to automatically generate the necessary interfaces between Kotlin and Swift.
+- **SwiftUI compatibility**: Practical example of a `SimpleTextView` component.
+- **Real-time state management**: Implementation of `ObservableObject` to keep Compose states synchronized with native SwiftUI views.
+
+---
+
+### Objective
+
+This project is designed to help developers:
+
+- Configure and use the Compose Swift Bridge plugin in their Kotlin Multiplatform projects.
+- Build cross-platform components that leverage customization and native performance on iOS.
+- Learn how to work with annotations like `@ExpectSwiftView` to automatically generate the required implementations for iOS.  
